@@ -1,0 +1,9 @@
+[user]
+	name = Thiago Puntar
+	email = thiagopuntar@gmail.com
+[push]
+	autoSetupRemote = true
+	default = current
+	autoSetupRemote = true
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work
