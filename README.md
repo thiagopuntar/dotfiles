@@ -4,10 +4,30 @@ Another dotfiles repo to centralize all the config files in a single place and m
 
 For now, my setup includes:
 
+## Dependencies: 
+
+- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) as terminal;
 - [Kitty](https://sw.kovidgoyal.net/kitty/) as a terminal emulator;
 - [Oh my zsh](https://ohmyz.sh/) as a zsh framework;
 - [Tmux](https://github.com/tmux/tmux/wiki) as a terminal multiplexer and helps me managing windows and panes;
 - [Neovim](https://neovim.io/) as a code editor;
+- [Gnu Stow](https://www.gnu.org/software/stow/);
+
+## Installing 
+
+1. Clone this project to root folder of your computer; 
+2. Run `stow .` to generate symbolic links for every config file;
+3. Install all the dependencies listed above in the same order;
+4. Install oh-my-zsh plugins:
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md);
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh);
+    - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting?tab=readme-ov-file#oh-my-zsh);
+    - [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete#manual-installation);
+        - Check this [tutorial](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) for ready to go config about zsh-autocomplete;
+5. Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm);
+6. Install [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-linux-package-managers) for tmux-sessionizer;
+7. Grant permission on tmux-sessionizer file;
+
 
 ## Neovim config
 
@@ -19,7 +39,8 @@ Ensure you have the following dependencies installed on your computer:
 
 - [Make](https://www.gnu.org/software/make/);
 - [Ripgrep](https://github.com/BurntSushi/ripgrep#installation);
+- [Nerd Fonts](https://linuxspin.com/install-nerd-fonts-on-ubuntu/)
+- [Node.js](https://nodejs.org);
 
-### To install:
-
-TBD
+Neovim might have some issues to start if you don't have Node.js installed (Mason errors);
+I've tried installing Neovim manually and worked fine on Ubuntu.

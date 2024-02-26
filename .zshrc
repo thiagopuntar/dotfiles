@@ -11,8 +11,16 @@ plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlig
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.local/bin/:$PATH"
-# export KUBECONFIG=~/.kube/dev.config:~/.kube/stg.config:~/.kube/prod.config
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 alias vim="nvim"
 
 alias rungo="~/.local/scripts/rungo.sh"
+
+# pnpm
+export PNPM_HOME="/home/thiagopuntar/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
