@@ -17,6 +17,7 @@ For now, my setup includes:
 
 1. Clone this project to root folder of your computer; 
 2. Run `stow .` to generate symbolic links for every config file;
+    Note: zsh installation may add a .zshrc file on root, delete that file before running stow.
 3. Install all the dependencies listed above in the same order;
 4. Install oh-my-zsh plugins:
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md);
@@ -26,7 +27,7 @@ For now, my setup includes:
         - Check this [tutorial](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) for ready to go config about zsh-autocomplete;
 5. Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm);
 6. Install [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-linux-package-managers) for tmux-sessionizer;
-7. Grant permission on tmux-sessionizer file;
+7. Grant permission to tmux-sessionizer file;
 
 
 ## Neovim config
@@ -41,6 +42,7 @@ Ensure you have the following dependencies installed on your computer:
 - [Ripgrep](https://github.com/BurntSushi/ripgrep#installation);
 - [Nerd Fonts](https://linuxspin.com/install-nerd-fonts-on-ubuntu/)
 - [Node.js](https://nodejs.org);
+- [eslint_d](https://www.npmjs.com/package/eslint_d);
 
-Neovim might have some issues to start if you don't have Node.js installed (Mason errors);
+Neovim might have some issues to start if you don't have Node.js installed (Mason errors) and eslint_d on JS projects.
 I've tried installing Neovim manually and worked fine on Ubuntu.
