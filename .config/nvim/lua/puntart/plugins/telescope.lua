@@ -1,3 +1,21 @@
+return {
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.2",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{
+				"nvim-telescope/telescope-live-grep-args.nvim",
+				-- This will not install any breaking changes.
+				-- For major updates, this must be adjusted manually.
+				version = "^1.0.0",
+			},
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+			},
+		},
+    config = function()
+
 local telescope = require("telescope")
 local telescopeConfig = require("telescope.config")
 
@@ -53,3 +71,5 @@ vim.keymap.set("n", "<leader>sr", function()
 end, {})
 vim.keymap.set("n", "<leader>st", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 vim.keymap.set("n", "<leader>sb", builtin.buffers, {})
+    end
+	}
