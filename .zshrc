@@ -17,8 +17,9 @@ alias vim="nvim"
 
 alias rungo="~/.local/scripts/rungo.sh"
 
+
 # pnpm
-export PNPM_HOME="/home/thiagopuntar/.local/share/pnpm"
+export PNPM_HOME="/home/tpuntar/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
