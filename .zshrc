@@ -14,6 +14,15 @@ export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 alias vim="nvim"
+alias lse="npx live-server"
+sudo() {
+  if [ "$1" = "vim" ]; then
+    shift
+    command sudo nvim "$@"
+  else
+    command sudo "$@"
+  fi
+}
 
 alias rungo="~/.local/scripts/rungo.sh"
 export PATH=$PATH:/usr/local/go/bin
