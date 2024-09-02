@@ -6,6 +6,7 @@ For now, my setup includes:
 
 ## Dependencies:
 
+- [i3](https://i3wm.org/) as a window manager;
 - [Gnu Stow](https://www.gnu.org/software/stow/) for manage symbolic links;
 - [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) as terminal;
 - [Kitty](https://sw.kovidgoyal.net/kitty/) as a terminal emulator;
