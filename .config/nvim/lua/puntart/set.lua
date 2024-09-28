@@ -7,6 +7,10 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.cursorline = true
 
+-- Better view on smaller screens
+vim.opt.breakindent = true
+vim.opt.linebreak = true
+
 -- Ignore case when searching with /
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -18,21 +22,21 @@ vim.api.nvim_command("highlight Visual guifg=White guibg=LightBlue gui=none")
 
 -- Jenkins file syntax
 vim.api.nvim_exec(
-	[[
+  [[
   augroup JenkinsfileFileType
     autocmd!
     autocmd BufNewFile,BufRead Jenkinsfile set filetype=groovy
   augroup END
 ]],
-	true
+  true
 )
 
 -- Highlight yanked text
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
 })

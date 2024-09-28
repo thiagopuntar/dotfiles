@@ -130,7 +130,7 @@ workspace 1 output $fm
 workspace 2 output $fm
 workspace 3 output $sm
 workspace 4 output $sm
-workspace 5 output $tm
+workspace 5 output $tm layout stacking
 workspace 6 output $tm
 workspace 7 output $tm
 workspace 8 output $tm
@@ -221,5 +221,7 @@ bar {
         position top
         font pango:Ubuntu Sans Mono 11
 }
+
+
 
 
