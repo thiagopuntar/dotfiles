@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "tpope/vim-surround",
   "tpope/vim-fugitive",
-  "github/copilot.vim",
   "ThePrimeagen/vim-be-good",
   "christoomey/vim-tmux-navigator",
   { import = "puntart.plugins" },
