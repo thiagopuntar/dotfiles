@@ -9,8 +9,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 -- move block as Vs code alt arrow down / arrow up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -27,7 +25,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Open oil nvim
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
-vim.keymap.set("n", "<leader>no", ':lua require("impulse").menu_search()<CR>', { desc = "Open parent directory" })
 
 -- Toggle treesitter context
 vim.keymap.set("n", "<leader>tc", ":TSContextToggle<CR>", { desc = "Toggle TS Context" })
+
+-- Copilot chat
+vim.keymap.set("n", "<leader>cco", ":CopilotChatToggle<CR>", { desc = "Open copilot chat" })
+vim.keymap.set("n", "<leader>cct", ":CopilotChatTests<CR>", { desc = "Generate tests" })
+vim.keymap.set("n", "<leader>ccf", ":CopilotChatFix<CR>", { desc = "Fix" })
+vim.keymap.set("n", "<leader>ccz", ":CopilotChatOptimize<CR>", { desc = "Optimize code" })

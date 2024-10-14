@@ -9,14 +9,23 @@ return {
     build = "make tiktoken",        -- Only on MacOS or Linux
     opts = {
       debug = true,                 -- Enable debugging
+      auto_follow_cursor = false,
       mappings = {
         reset = {
           normal = "<C-x>",
           insert = "<C-x>",
         },
+        close = {
+          insert = '<Nop>'
+        }
+      },
+      prompts = {
+        Fix = {
+
+        },
+        Optimize = {},
+        Tests = {},
       }
-      -- See Configuration section for rest
     },
-    -- See Commands section for default commands if you want to lazy load on them
   },
 }
