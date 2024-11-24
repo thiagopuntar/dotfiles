@@ -122,20 +122,19 @@ bindsym $mod+a focus parent
 # Define monitor variables
 set $fm eDP-1
 set $sm HDMI-1-0
-set $tm DP-1-0
 set $mod Mod4
 
 # Define workspace outputs to different monitors
 workspace 1 output $fm
 workspace 2 output $fm
-workspace 3 output $sm
-workspace 4 output $sm
-workspace 5 output $tm layout stacking
-workspace 6 output $tm
-workspace 7 output $tm
-workspace 8 output $tm
-workspace 9 output $tm
-workspace 10 output $tm
+workspace 3 output $fm
+workspace 4 output $fm
+workspace 5 output $fm layout stacking
+workspace 6 output $sm
+workspace 7 output $sm
+workspace 8 output $sm
+workspace 9 output $sm
+workspace 10 output $sm
 
 # Default assigns
 assign [class="obsidian"] 1
