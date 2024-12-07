@@ -35,3 +35,41 @@ vim.keymap.set("n", "<leader>cct", ":CopilotChatTests<CR>", { desc = "Generate t
 vim.keymap.set("n", "<leader>ccf", ":CopilotChatFix<CR>", { desc = "Fix" })
 vim.keymap.set("n", "<leader>ccz", ":CopilotChatOptimize<CR>", { desc = "Optimize code" })
 vim.keymap.set({ "n", "v" }, "<leader>cce", ":CopilotChatExplain<CR>", { desc = "Explain this code" })
+
+-- Quickfix list mappings
+---- Filters the Quickfix list based on a regex and a specific field
+local function filter_quickfix_by(regex, field)
+  local qflist = vim.fn.getqflist()
+  local filtered = vim.tbl_filter(function(entry)
+    return string.match(entry[field] or "", regex)
+  end, qflist)
+  vim.fn.setqflist(filtered)
+end
+
+-- Prompts user input and filters by buffer
+local function filter_buffer()
+  vim.fn.inputsave()
+  local regex = vim.fn.input("Filter buffer by regex: ")
+  vim.fn.inputrestore()
+  if regex ~= "" then
+    filter_quickfix_by(regex, "bufnr")
+  end
+end
+
+-- Prompts user input and filters by text
+local function filter_text()
+  vim.fn.inputsave()
+  local regex = vim.fn.input("Filter by text (regex): ")
+  vim.fn.inputrestore()
+  if regex ~= "" then
+    filter_quickfix_by(regex, "text")
+  end
+end
+
+-- Key mappings for Quickfix operations
+vim.keymap.set('n', '<leader>qb', filter_buffer, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>qt', filter_text, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>qo', ':copen<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>qc', ':cclose<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>qn', ':cnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>qp', ':cprevious<CR>', { noremap = true, silent = true })
