@@ -31,6 +31,7 @@ For now, my setup includes:
 5. Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm);
 6. Install [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-linux-package-managers) for tmux-sessionizer;
 7. Grant permission to tmux-sessionizer file;
+8. Check this chatgpt story to install i3 monitors config;
 
 ## Neovim config
 
