@@ -5,5 +5,4 @@ xinput set-prop "UNIW0001:00 093A:0255 Touchpad" "libinput Natural Scrolling Ena
 
 # Setup external monitors
 xrandr --output HDMI-1-0 --auto --right-of eDP-1
-xrandr --output DP-1-0 --auto --right-of HDMI-1-0
 
