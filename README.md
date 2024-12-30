@@ -15,6 +15,7 @@ For now, my setup includes:
 - [Nvm](https://github.com/nvm-sh/nvm) to manage node.js environments;
 - [Neovim](https://neovim.io/) as a code editor;
   - To properly install neovim, check the instructions below;
+- Xscreensaver, for fancy screen saver on my hacker machine;
 
 ## Installing
 
