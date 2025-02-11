@@ -124,6 +124,7 @@ set $fm eDP-1
 set $sm HDMI-1-0
 set $mod Mod4
 
+
 # Define workspace outputs to different monitors
 workspace 1 output $fm
 workspace 2 output $fm
@@ -138,7 +139,7 @@ workspace 10 output $sm
 
 # Default assigns
 assign [class="obsidian"] 1
-assign [class="spotify"] 2
+assign [class="spotify"] 10
 assign [class="slack"] 3
 
 # Define names for default workspaces for which we configure key bindings later on.
