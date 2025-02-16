@@ -21,6 +21,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-o>", "<C-o>zz")
+vim.keymap.set("n", "<C-i>", "<C-i>zz")
 
 -- Open oil nvim
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -34,6 +36,7 @@ vim.keymap.set("n", "<leader>cco", ":CopilotChatToggle<CR>", { desc = "Open copi
 vim.keymap.set("n", "<leader>cct", ":CopilotChatTests<CR>", { desc = "Generate tests" })
 vim.keymap.set("n", "<leader>ccf", ":CopilotChatFix<CR>", { desc = "Fix" })
 vim.keymap.set("n", "<leader>ccz", ":CopilotChatOptimize<CR>", { desc = "Optimize code" })
+vim.keymap.set("n", "<leader>ccc", ":CopilotChatCommit<CR>", { desc = "Commit code" })
 vim.keymap.set({ "n", "v" }, "<leader>cce", ":CopilotChatExplain<CR>", { desc = "Explain this code" })
 
 -- Quickfix list mappings
@@ -56,7 +59,7 @@ local function filter_buffer()
   end
 end
 
--- Prompts user input and filters by text
+
 local function filter_text()
   vim.fn.inputsave()
   local regex = vim.fn.input("Filter by text (regex): ")
