@@ -34,22 +34,6 @@ bwls() {
   bw list items --search "$search_term" | jq --arg term "$search_term" '.[] | {username: .login.username, password: .login.password, id: .id, name: .name} | select(.name | test($term; "i"))'
 }
 
-cdkitty() {
-  selected_dir=$(find ~/projects ~/ ~/work ~/tripleten -mindepth 1 -maxdepth 1 -type d | fzf)
-
-# Check if a directory was selected
-  if [[ -n "$selected_dir" ]]; then
-
-    cd "$selected_dir" || return 
-  else
-    # Exit if no directory was selected
-    echo "No directory selected. Exiting."
-    exit 1
-  fi
-}
-
-
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
