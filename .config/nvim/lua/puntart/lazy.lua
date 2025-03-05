@@ -15,6 +15,5 @@ require("lazy").setup({
   "tpope/vim-surround",
   "tpope/vim-fugitive",
   "ThePrimeagen/vim-be-good",
-  "christoomey/vim-tmux-navigator",
   { import = "puntart.plugins" },
 })
