@@ -1,0 +1,20 @@
+#!/bin/bash
+# Increase playback speed of HTML5 videos/audios
+
+# JavaScript to increase playback speed
+JS_CODE=$(cat <<EOF
+(function() {
+    const speedIncrement = 0.25; // Increase speed by 0.25x
+    const mediaElements = document.querySelectorAll('video, audio');
+    mediaElements.forEach(media => {
+        if (media.playbackRate + speedIncrement <= 4.0) { // Max speed 4.0x
+            media.playbackRate += speedIncrement;
+        }
+    });
+})();
+EOF
+)
+
+# Send the JavaScript code to qutebrowser
+echo "jseval --quiet $JS_CODE" | socat - UNIX-CONNECT:"$QUTE_FIFO"
+
