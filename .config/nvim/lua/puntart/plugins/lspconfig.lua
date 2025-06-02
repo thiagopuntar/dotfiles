@@ -114,12 +114,11 @@ return {
       filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
     })
 
-    -- configure graphql language server
-    -- lspconfig["volar"].setup({
-    -- 	capabilities = capabilities,
-    -- 	on_attach = on_attach,
-    -- 	filetypes = { "vue", "typescriptreact", "javascriptreact" },
-    -- })
+    lspconfig["volar"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "vue" },
+    })
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({

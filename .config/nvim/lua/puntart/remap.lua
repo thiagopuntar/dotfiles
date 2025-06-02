@@ -26,6 +26,12 @@ vim.keymap.set("n", "<C-i>", "<C-i>zz")
 -- Open oil nvim
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+vim.keymap.set("n", "<leader>gx", function()
+  local oil = require("oil")
+  local dir = oil.get_current_dir()
+  vim.fn.jobstart({ "nautilus", dir }, { detach = true })
+end, { desc = "Abrir pasta atual no Nautilus" })
+
 
 -- Toggle treesitter context
 vim.keymap.set("n", "<leader>tc", ":TSContextToggle<CR>", { desc = "Toggle TS Context" })
@@ -37,6 +43,9 @@ vim.keymap.set("n", "<leader>ccf", ":CopilotChatFix<CR>", { desc = "Fix" })
 vim.keymap.set("n", "<leader>ccz", ":CopilotChatOptimize<CR>", { desc = "Optimize code" })
 vim.keymap.set("n", "<leader>ccc", ":CopilotChatCommit<CR>", { desc = "Commit code" })
 vim.keymap.set({ "n", "v" }, "<leader>cce", ":CopilotChatExplain<CR>", { desc = "Explain this code" })
+
+-- Octo nvim
+vim.keymap.set('n', '<leader>oca', '<cmd>Octo comment add<CR>', { desc = 'Octo: Add PR comment' })
 
 -- Quickfix list mappings
 ---- Filters the Quickfix list based on a regex and a specific field
