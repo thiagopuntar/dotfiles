@@ -52,7 +52,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # Lock screen
-bindsym $mod+b exec xscreensaver-command -lock
+bindsym $mod+o exec xscreensaver-command -lock
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -87,7 +87,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -127,10 +127,10 @@ set $mod Mod4
 
 # Define workspace outputs to different monitors
 workspace 1 output $fm
-workspace 2 output $fm
-workspace 3 output $fm
-workspace 4 output $fm
-workspace 5 output $fm layout stacking
+workspace 2 output $sm
+workspace 3 output $sm
+workspace 4 output $sm
+workspace 5 output $sm
 workspace 6 output $sm
 workspace 7 output $sm
 workspace 8 output $sm
@@ -138,9 +138,9 @@ workspace 9 output $sm
 workspace 10 output $sm
 
 # Default assigns
-assign [class="obsidian"] 1
+assign [class="obsidian"] 2
 assign [class="spotify"] 10
-assign [class="slack"] 3
+assign [class="slack"] 10
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
