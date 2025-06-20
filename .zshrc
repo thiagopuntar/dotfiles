@@ -3,7 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="agnoster"
+ZSH_THEME="gozilla"
 export DEFAULT_USER=$USER
 
 plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
@@ -11,7 +11,7 @@ plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlig
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 alias vim="nvim"
 alias lse="npx live-server"
@@ -38,9 +38,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-nvm use 20
-
-alias rungo="~/.local/scripts/rungo.sh"
+nvm use 20 
 
 
 export PATH=$PATH:/usr/local/go/bin
